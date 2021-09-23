@@ -1,0 +1,10 @@
+import { Paginated } from '@feathersjs/feathers';
+declare type Await<T> = T extends PromiseLike<infer U> ? U : T;
+export declare const replaceAsync: <F extends (...p: any[]) => Promise<any>>(_f: F, effect: (r: Await<ReturnType<F>>) => any, capture?: ((...p: any[]) => any) | undefined, filter?: ((...p: Parameters<F>) => Parameters<F>) | undefined, final?: ((...p: any[]) => any) | undefined, early?: ((...p: any[]) => any) | undefined) => F;
+export declare const safeReplaceAsync: <F extends (...p: any[]) => Promise<any>>(_f: F, effect: (r: Await<ReturnType<F>>) => any, capture?: ((...p: any[]) => any) | undefined, filter?: ((...p: Parameters<F>) => any) | undefined, final?: ((...p: any[]) => any) | undefined, early?: ((...p: any[]) => any) | undefined) => F;
+export declare const chunk: <T>(array: T[], size: number) => T[][];
+export declare const maybeArray: <T>(maybe: T | T[]) => T[];
+export declare const isPaginated: <T>(data: T | Paginated<T> | T[]) => data is Paginated<T>;
+export declare const feathersResultToArray: <T>(data: T | Paginated<T> | T[]) => T[];
+export declare type RequiredType<T> = T extends undefined ? never : T;
+export {};

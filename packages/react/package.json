@@ -1,0 +1,32 @@
+{
+	"name": "@asas/react",
+	"version": "1.0.0",
+	"author": "Ícaro C. Capobianco",
+	"license": "MIT",
+	"main": "es5/index.js",
+	"types": "types/index.d.ts",
+	"module": "es6/index.js",
+	"source": "src/index.ts",
+	"require": "es5/index.js",
+	"import": "es6/index.js",
+	"scripts": {
+		"watch-es5": "tsc -p tsconfig.json --target es5 --outDir es5 --module commonjs --watch --declaration false",
+		"watch-es6": "tsc -p tsconfig.json --target es6 --outDir es6 --module es6 --watch --declaration false",
+		"watch-types": "tsc -p tsconfig.json --watch --declarationDir types --emitDeclarationOnly",
+		"watch": "concurrently -n w: npm:watch-*",
+		"typecheck": "tsc",
+		"typecheck:watch": "tsc -w"
+	},
+	"devDependencies": {
+		"concurrently": "^6.1.0",
+		"typescript": "^4.4.0-beta"
+	},
+	"dependencies": {
+		"@asas-virtuais/client": "workspace:^1.0.0",
+		"@chakra-ui/hooks": "^1.5.5",
+		"@chakra-ui/react-utils": "^1.1.2",
+		"@types/react": "^17.0.16",
+		"feathers-hooks-common": "^5.0.6",
+		"react": "^17.0.2"
+	}
+}
