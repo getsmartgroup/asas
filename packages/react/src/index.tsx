@@ -1,6 +1,6 @@
 import { useState, useCallback, useMemo, FC } from 'react'
 import { createContext } from '@chakra-ui/react-utils'
-import { safeReplaceAsync, WrappedService } from '@asas-virtuais/client'
+import { safeReplaceAsync, WrappedService } from '@asas/client'
 import feathers from '@feathersjs/feathers'
 
 export const createServiceContext = <

@@ -22,7 +22,7 @@
 		"typescript": "^4.4.0-beta"
 	},
 	"dependencies": {
-		"@asas-virtuais/client": "workspace:^1.0.0",
+		"@asas/client": "workspace:^1.0.0",
 		"@chakra-ui/hooks": "^1.5.5",
 		"@chakra-ui/react-utils": "^1.1.2",
 		"@types/react": "^17.0.16",

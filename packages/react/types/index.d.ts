@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { WrappedService } from '@asas-virtuais/client';
+import { WrappedService } from '@asas/client';
 import feathers from '@feathersjs/feathers';
 export declare const createServiceContext: <S extends WrappedService<any, any, any>, US extends UseWrappedService<S, InferServiceReadable<S>> = UseWrappedService<S, InferServiceReadable<S>>>(service: S) => {
     Provider: FC<{}>;
